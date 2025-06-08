@@ -123,6 +123,10 @@ body {
   border-radius: 5px;
 }
 
+.optima-treatment {
+  padding-top: 1.2rem;
+}
+
 .price {
   font-weight: 700;
 }
@@ -177,6 +181,14 @@ footer {
   margin: 0.2rem 0;
 }
 
+.phone-link {
+  color: #eac199;
+  text-decoration: none;
+}
+.phone-link:hover {
+  color: #f5d8b8;
+}
+
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -197,7 +209,7 @@ footer {
   display: none;
 }
 #show-more {
-  display: none;
+  display: block;
   margin: 1rem auto;
 }
 
