@@ -226,6 +226,9 @@ footer {
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: fit-content;
 }
 
 #show-more:hover {
@@ -271,6 +274,9 @@ footer {
   }
   .menu-toggle {
     display: block;
+  }
+  .logo img {
+    height: 40px;
   }
   .footer-content {
     flex-direction: column;
