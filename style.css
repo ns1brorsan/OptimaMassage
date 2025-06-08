@@ -215,6 +215,11 @@ footer {
 .extra-treatment {
   display: none;
 }
+
+/* When grid is expanded show extra treatments */
+.treatment-grid.show-all .extra-treatment {
+  display: block;
+}
 #show-more {
   display: block;
   margin: 1rem auto;

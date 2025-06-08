@@ -24,18 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
   // "Visa mer" and "Visa mindre" buttons for treatments
   const moreBtn = document.getElementById('show-more');
   const lessBtn = document.getElementById('show-less');
-  if (moreBtn) {
+  const treatmentGrid = document.querySelector('.treatment-grid');
+  if (moreBtn && lessBtn && treatmentGrid) {
     moreBtn.addEventListener('click', () => {
-      document.querySelectorAll('.extra-treatment').forEach(t => t.style.display = 'block');
+      treatmentGrid.classList.add('show-all');
       moreBtn.style.display = 'none';
-      if (lessBtn) lessBtn.style.display = 'block';
+      lessBtn.style.display = 'block';
     });
-  }
-  if (lessBtn) {
     lessBtn.addEventListener('click', () => {
-      document.querySelectorAll('.extra-treatment').forEach(t => t.style.display = 'none');
+      treatmentGrid.classList.remove('show-all');
       lessBtn.style.display = 'none';
-      if (moreBtn) moreBtn.style.display = 'block';
+      moreBtn.style.display = 'block';
+      moreBtn.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   }
 
