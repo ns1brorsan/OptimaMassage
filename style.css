@@ -152,23 +152,24 @@ body {
 }
 
 footer {
-  background: var(--light-color);
+  background: var(--primary-color);
+  color: var(--light-color);
   text-align: center;
   padding: 2rem 0;
   font-size: 0.9rem;
-  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+  border-top: 3px solid var(--accent-color);
 }
 
 .social a {
-  color: var(--primary-color);
+  color: var(--light-color);
   margin: 0 0.5rem;
   font-size: 1.4rem;
 }
-
 .footer-content {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -194,6 +195,10 @@ footer {
 /* Treatments */
 .extra-treatment {
   display: none;
+}
+#show-more {
+  display: none;
+  margin: 1rem auto;
 }
 
 /* Mobile navigation */
@@ -224,6 +229,13 @@ footer {
     margin: 0.5rem 0;
   }
   .menu-toggle {
+    display: block;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  #show-more {
     display: block;
   }
 }
