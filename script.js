@@ -21,38 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // Simple chat widget
-  const chatToggle = document.getElementById('chat-toggle');
-  const chatContainer = document.getElementById('chat-container');
-  const chatInputField = document.querySelector('#chat-input input');
-  const chatSend = document.querySelector('#chat-input button');
-  const chatMessages = document.getElementById('chat-messages');
-
-  function sendMsg() {
-    const text = chatInputField.value.trim();
-    if (!text) return;
-    const userDiv = document.createElement('div');
-    userDiv.textContent = 'Du: ' + text;
-    chatMessages.appendChild(userDiv);
-    chatInputField.value = '';
-    const botDiv = document.createElement('div');
-    botDiv.textContent = 'Bot: Tack f\u00f6r ditt meddelande! Vi svarar s\u00e5 snart vi kan.';
-    chatMessages.appendChild(botDiv);
-    chatMessages.scrollTop = chatMessages.scrollHeight;
+  // "Visa mer" button for treatments
+  const moreBtn = document.getElementById('show-more');
+  if (moreBtn) {
+    moreBtn.addEventListener('click', () => {
+      document.querySelectorAll('.extra-treatment').forEach(t => t.style.display = 'block');
+      moreBtn.style.display = 'none';
+    });
   }
 
-  if (chatToggle) {
-    chatToggle.addEventListener('click', () => {
-      if (chatContainer.style.display === 'flex') {
-        chatContainer.style.display = 'none';
-      } else {
-        chatContainer.style.display = 'flex';
-        chatInputField.focus();
-      }
-    });
-    chatSend.addEventListener('click', sendMsg);
-    chatInputField.addEventListener('keypress', function (e) {
-      if (e.key === 'Enter') sendMsg();
+  // Mobile menu toggle
+  const menuToggle = document.getElementById('menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
     });
   }
 });
