@@ -44,6 +44,9 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
 }
+.logo img {
+  height: 50px;
+}
 
 .nav-links {
   list-style: none;
