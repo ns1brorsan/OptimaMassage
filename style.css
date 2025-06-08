@@ -305,7 +305,8 @@ footer {
   #show-more {
     display: block;
   }
+  /* keep "Visa mindre" hidden until triggered by script */
   #show-less {
-    display: block;
+    display: none;
   }
 }
