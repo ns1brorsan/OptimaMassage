@@ -56,10 +56,14 @@ body {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.3s, color 0.3s;
 }
 
 .nav-links a:hover {
-  color: var(--accent-color);
+  background: var(--accent-color);
+  color: var(--light-color);
 }
 
 .hero {
@@ -211,16 +215,35 @@ footer {
 #show-more {
   display: block;
   margin: 1rem auto;
+  background: var(--accent-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#show-more:hover {
+  background: #c58f60;
 }
 
 /* Mobile navigation */
 .menu-toggle {
   display: none;
-  background: none;
-  border: none;
+  background: var(--light-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
   font-size: 1.5rem;
   cursor: pointer;
   color: var(--primary-color);
+  transition: background 0.3s;
+}
+
+.menu-toggle:hover {
+  background: #f2e7df;
 }
 
 .nav-links.open {
@@ -236,6 +259,9 @@ footer {
     align-items: flex-start;
     width: 100%;
     display: none;
+    background: var(--light-color);
+    border-top: 1px solid #eee;
+    padding: 0.5rem 0;
   }
   .nav-links li {
     margin: 0.5rem 0;

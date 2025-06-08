@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', function () {
   if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('open');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
     });
   }
 });
