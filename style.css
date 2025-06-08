@@ -142,6 +142,15 @@ body {
   width: 100%;
 }
 
+.about-content {
+  text-align: center;
+}
+
+.about-content p {
+  max-width: 600px;
+  margin: 0 auto 1rem;
+}
+
 footer {
   background: var(--light-color);
   text-align: center;
@@ -163,6 +172,10 @@ footer {
   gap: 1rem;
 }
 
+.contact-info p {
+  margin: 0.2rem 0;
+}
+
 .scroll-top {
   position: fixed;
   bottom: 20px;
@@ -178,67 +191,23 @@ footer {
   z-index: 1000;
 }
 
-#chat-container {
-  position: fixed;
-  bottom: 20px;
-  right: 80px;
-  width: 300px;
-  background: var(--light-color);
-  border: 1px solid var(--accent-color);
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+/* Treatments */
+.extra-treatment {
   display: none;
-  flex-direction: column;
-  z-index: 1000;
 }
 
-#chat-header {
-  background: var(--accent-color);
-  color: var(--light-color);
-  padding: 0.5rem;
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+/* Mobile navigation */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
-#chat-messages {
-  padding: 0.5rem;
-  height: 200px;
-  overflow-y: auto;
-}
-
-#chat-input {
+.nav-links.open {
   display: flex;
-  border-top: 1px solid var(--accent-color);
-}
-
-#chat-input input {
-  flex-grow: 1;
-  padding: 0.5rem;
-  border: none;
-}
-
-#chat-input button {
-  background: var(--accent-color);
-  color: var(--light-color);
-  border: none;
-  padding: 0 1rem;
-  cursor: pointer;
-}
-
-#chat-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: var(--accent-color);
-  color: var(--light-color);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.4rem;
-  cursor: pointer;
-  z-index: 1000;
 }
 
 @media (max-width: 768px) {
@@ -249,12 +218,12 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     width: 100%;
+    display: none;
   }
   .nav-links li {
     margin: 0.5rem 0;
   }
-  #chat-container {
-    right: 20px;
-    bottom: 80px;
+  .menu-toggle {
+    display: block;
   }
 }
