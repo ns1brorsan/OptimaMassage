@@ -228,6 +228,23 @@ footer {
   transition: background 0.3s;
 }
 
+#show-less {
+  display: none;
+  margin: 1rem auto;
+  background: var(--accent-color);
+  color: var(--light-color);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#show-less:hover {
+  background: #c58f60;
+}
+
 #show-more:hover {
   background: #c58f60;
 }
@@ -277,6 +294,9 @@ footer {
     text-align: center;
   }
   #show-more {
+    display: block;
+  }
+  #show-less {
     display: block;
   }
 }

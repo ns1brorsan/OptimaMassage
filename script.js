@@ -21,12 +21,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // "Visa mer" button for treatments
+  // "Visa mer" and "Visa mindre" buttons for treatments
   const moreBtn = document.getElementById('show-more');
+  const lessBtn = document.getElementById('show-less');
   if (moreBtn) {
     moreBtn.addEventListener('click', () => {
       document.querySelectorAll('.extra-treatment').forEach(t => t.style.display = 'block');
       moreBtn.style.display = 'none';
+      if (lessBtn) lessBtn.style.display = 'block';
+    });
+  }
+  if (lessBtn) {
+    lessBtn.addEventListener('click', () => {
+      document.querySelectorAll('.extra-treatment').forEach(t => t.style.display = 'none');
+      lessBtn.style.display = 'none';
+      if (moreBtn) moreBtn.style.display = 'block';
     });
   }
 
